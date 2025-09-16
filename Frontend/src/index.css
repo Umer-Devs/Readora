@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --font-space-grotesk:  "Montserrat", sans-serif;
+  --color-dark-browne: #4A3728;
+  --color-primary-brown: #a98467;
+  --color-light-green: #dde5b6;
+  --color-primary-green: #6B8E23;
+}
+
+/* Base styles */
+@layer base {
+  body {
+    overflow-x: hidden !important;
+    font-family: var(--font-space-grotesk);
+  }
+}
+
+/* Custom components */
+@layer components {
+  .custom-padding {
+    @apply px-4 md:px-9 lg:px-16 xl:px-20 2xl:px-40;
+  }
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl;
+  }
+  p {
+    @apply md:text-lg;
+  }
+  .floating-element {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+/* Animations */
+@layer utilities {
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+}
