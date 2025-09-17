@@ -1,11 +1,16 @@
 import React from 'react'
-import { NavBar } from '../../Componenets'
+import {  NavBar, ShowAllBooks } from '../../Componenets'
 
 const HomePage = () => {
   return (
    <>
-   {/* herader  */}
-   <NavBar/>
+   <section className='min-h-screen w-full pt-6  bg-dark-browne'>
+{/* navbar componenet  */}
+<NavBar/>
+
+<ShowAllBooks/>
+
+   </section>
    </>
   )
 }
