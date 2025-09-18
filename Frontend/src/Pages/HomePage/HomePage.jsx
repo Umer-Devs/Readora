@@ -8,7 +8,7 @@ const HomePage = () => {
 {/* navbar componenet  */}
 <NavBar/>
 
-<ShowAllBooks/>
+<ShowAllBooks book={"All Books"}/>
 
    </section>
    </>

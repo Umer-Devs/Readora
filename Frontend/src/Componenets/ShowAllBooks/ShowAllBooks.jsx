@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const ShowAllBooks = () => {
+const ShowAllBooks = ({book}) => {
   const books = [
     {
       bookname: "The Great Gatsby",
@@ -22,7 +22,7 @@ const ShowAllBooks = () => {
       language: "English",
       pages: 180,
       frontcover:
-        "https://images.unsplash.com/photo-1544716278-ca5e3f4ebf0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+        "https://cdn.pixabay.com/photo/2018/10/26/02/19/book-3773783_1280.jpg",
       description:
         "A story of the fabulously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan.",
     },
@@ -36,7 +36,7 @@ const ShowAllBooks = () => {
       language: "English",
       pages: 412,
       frontcover:
-        "https://images.unsplash.com/photo-1618484823749-7d4d41a94b67?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+        "https://cdn.pixabay.com/photo/2019/12/18/13/56/glasses-4704055_640.jpg",
       description:
         "An epic science fiction tale about Paul Atreides on the desert planet Arrakis.",
     },
@@ -58,11 +58,11 @@ const ShowAllBooks = () => {
 
   return (
     <section className="w-full min-h-screen bg-dark-browne py-10">
-      <div className="px-6 lg:px-16">
+      <div className="px-6 lg:px-16  ">
         {/* Heading */}
-        <h1 className="text-3xl font-bold text-white  mb-8 flex items-center gap-2">
-          <Book className="w-7 h-7 text-primary-green" />
-          All  Books
+        <h1 className=" font-bold   italic underline  text-white   mb-12   text-center gap-2">
+          
+          {book}
         </h1>
 
         {/* Grid */}
@@ -91,26 +91,26 @@ const ShowAllBooks = () => {
                 {/* Genre, Year, Language, Pages */}
                 <div className="grid grid-cols-2 gap-y-2 text-sm text-gray-600 mb-3">
                   <div className="flex items-center gap-1">
-                    <FileText className="w-4 h-4 text-primary-green" />
+                    <FileText className="w-4 h-4 text-primary-blue" />
                     <span>{book.genre}</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4 text-primary-green" />
+                    <Calendar className="w-4 h-4 text-primary-blue" />
                     <span>{book.publicationyear}</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Globe className="w-4 h-4 text-primary-green" />
+                    <Globe className="w-4 h-4 text-primary-blue" />
                     <span>{book.language}</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <BookOpen className="w-4 h-4 text-primary-green" />
+                    <BookOpen className="w-4 h-4 text-primary-blue" />
                     <span>{book.pages} pages</span>
                   </div>
                 </div>
 
                 {/* Price & Rating */}
                 <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-1 text-primary-green font-semibold">
+                  <div className="flex items-center gap-1 text-primary-blue font-semibold">
                     <DollarSign className="w-4 h-4" />
                     <span>{book.price}</span>
                   </div>
@@ -131,7 +131,7 @@ const ShowAllBooks = () => {
               {/* Button */}
               <Link
                 to="#"
-                className="mt-4 block text-center bg-primary-green text-white py-2 rounded-xl hover:bg-primary-green/90 transition"
+                className="mt-4 block text-center bg-primary-blue text-white py-2 rounded-xl hover:bg-primary-blue/90 transition"
               >
                 View Details
               </Link>
