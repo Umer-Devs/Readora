@@ -4,11 +4,11 @@
 
 @theme {
   --font-space-grotesk:  "Montserrat", sans-serif;
-  --color-dark-browne: #333d29;
-  --color-primary-brown: #a98467;
-  --color-light-green: #dde5b6;
-  --color-primary-green: #a4ac86;
-  --color-primary-blue: #3a3f5f;
+  --color-dark: #01161e;
+  --color-dark-blue: #124559;
+  --color-light-blue: #598392;
+  --color-light: #eff6e0;
+ 
 }
 
 /* Base styles */
