@@ -6,7 +6,7 @@ import {CircleAlert, LogOut} from 'lucide-react'
 const SideBar = () => {
   return (
  <>
- <section className=' min-h-screen flex flex-col items-center py-20  w-60 bg-light-blue'>
+ <section className='    min-h-screen flex flex-col items-center py-10  w-[13%] bg-light-blue'>
 
 
    <div className='my-[6%] flex flex-col items-center '>

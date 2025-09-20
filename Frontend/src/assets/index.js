@@ -1,0 +1,1 @@
+export {default as Book1} from "./Books/DavidAlbertJamesBrandBook.jpg"

@@ -4,4 +4,4 @@ export {default as UpdateBookPage } from "./UpdateBookPage/UpdateBookPage" ;
 export {default as RentBook } from "./RentBook/RentBook" ;
 export {default as CartBook } from "./RentBook/RentBook" ;
 export {default as AddBookPage } from "./AddBookPage/AddBookPage" ;
-export {default as BookDetailPage } from "./BookDetailPage/BookDetailPage" ;
+export {default as Books } from "./Books/Books" ;
