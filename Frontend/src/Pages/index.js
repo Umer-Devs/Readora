@@ -5,3 +5,4 @@ export {default as RentBook } from "./RentBook/RentBook" ;
 export {default as CartBook } from "./RentBook/RentBook" ;
 export {default as AddBookPage } from "./AddBookPage/AddBookPage" ;
 export {default as Books } from "./Books/Books" ;
+export {default as BookDetail } from "./BookDetail/BookDetail" ;

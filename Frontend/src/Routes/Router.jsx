@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter , Route, Routes } from 'react-router-dom'
 import { AddBookPage,  Books, CartBook, HomePage, MyBookPage, RentBook, UpdateBookPage } from '../Pages'
 import { LoginForm, SignupForm } from '../Forms'
+import BookDetail from '../Pages/BookDetail/BookDetail'
 
 const Router = () => {
   return (
@@ -16,6 +17,7 @@ const Router = () => {
     <Route path='/cart-book' element={<CartBook/>}/>
     <Route path='/add-book' element={<AddBookPage/>}/>
     <Route path='/books' element={<Books/>}/>
+    <Route path='/book-detail' element={<BookDetail/>}/>
     {/* pages  */}
     {/* forms  */}
     <Route path='/login' element={<LoginForm/>}/>
