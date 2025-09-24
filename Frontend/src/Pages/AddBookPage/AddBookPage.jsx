@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import axios from 'axios'
 
 const AddBookPage = () => {
   const [formData, setFormData] = useState({
@@ -31,15 +32,27 @@ const AddBookPage = () => {
     }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const data = new FormData()
 
     
     Object.keys(formData).forEach(key => {
       data.append(key, formData[key])
+
     })
-    // console.log('Form submitted:', Object.fromEntries(data))
+const formDataw = Object.fromEntries(data);
+console.log(formDataw);
+
+
+    try {
+     const res = await axios.post("http://localhost:3000/book-data", data);
+    console.log("Response:", res.data);
+      
+    } catch (error) {
+      console.log("failed to post data on backend",error);
+      
+    }
   }
 
   return (

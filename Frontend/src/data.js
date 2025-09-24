@@ -15,7 +15,7 @@ const navLinks = [
     },
     {
         name:"Add Books",
-        Link:"/add-books",
+        Link:"/add-book",
     },
     {
         name:"Book Info",
