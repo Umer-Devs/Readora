@@ -3,6 +3,7 @@ import multer from 'multer'
 import express, { json } from 'express';
 import cors from 'cors';
 import { connectDb } from './DataBase/Index.js';
+import { Book } from './Models/Addbook.Models.js';
 dotenv.config({
     path : './.env'
 });
@@ -25,14 +26,27 @@ const upload = multer({dest:'uploads/'})
  app.post('/book-data', upload.fields([
     {name:"frontCover"},
     {name:"backCover"}
- ]), (req,res)=>{
-    const bookData  = req.body;
+ ]),async (req,res)=>{
+    const { bookName, author, isbn, publicationYear, genre, description, publisher, ratings, available } = req.body;
     const bookFile  = req.files;
-    console.log(bookFile);
-    if(!bookData){
-        res.status(400).send("error")
-    }
-    res.status(200).send("data is recevied") ;
+    const frontCover =  bookFile.frontCover[0].path.replace(/\\/g, "/");
+    const backCover =  bookFile.backCover[0].path.replace(/\\/g, "/");
+    
+  
+    
+   try {
+    const  bookData = new Book({
+        bookName, author, isbn, publicationYear, genre, description, publisher, ratings, available ,frontCover,backCover
+
+    });
+    const saveBookData = await bookData.save();
+    console.log(saveBookData);
+    res.status(200).send("data is sent sucessfully");
+    
+   } catch (error) {
+     console.log("failed to save add books data in to databse",error);
+     
+   }
     
  })
 
